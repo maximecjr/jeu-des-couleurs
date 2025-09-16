@@ -51,4 +51,10 @@ body{
 p{
     color: white;
 }
+h1{
+  color: white;
+}
+li{
+  color: white;
+}
 .carre { width: 200px; aspect-ratio: 1 / 1; border-radius: 12px; }
