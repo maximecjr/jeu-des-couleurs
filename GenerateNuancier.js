@@ -48,7 +48,7 @@
             document.getElementById('Valider').addEventListener("click", () =>{
               if(localStorage.getItem("guess")== 1){
                 localStorage.setItem("guess", 2)
-                location.assign("SecondHint.html")
+                location.assign("waitingScreen.html")
               }else if(localStorage.getItem("guess")== 2){
                 location.assign("finalScreen.html")
               }
