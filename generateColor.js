@@ -1,24 +1,44 @@
-  const el = document.getElementById('carre');
-  const btnCarte = document.getElementById('BtnCarte');
-  const btnStart = document.getElementById('StartBtn');
+  const ChoixCouleur1 = document.getElementById('carre1');
+  const ChoixCouleur2 = document.getElementById('carre2');
+  const ChoixCouleur3 = document.getElementById('carre3');
+  const ChoixCouleur4 = document.getElementById('carre4');
   var coCouleur = new Map();
   if(localStorage.getItem("guess") == null){
     localStorage.setItem("guess", 1)
   }
-  btnCarte.addEventListener('click', () => {
-    let randomColor = (Math.floor(Math.random()*600));  
-    el.style.backgroundColor = getAllColors()[randomColor];
-    console.log(getAllColors()[randomColor])
-    localStorage.setItem("couleur",getAllColors()[randomColor])
-    localStorage.setItem("coCouleur",coCouleur.get(getAllColors()[randomColor]))
-  });
-  btnStart.addEventListener('click', () => {
-    if(localStorage.getItem("couleur")==null){
-      alert('veuillez tirez une carte')
-    }else{
-      document.location.replace('nuancier.html')
-    }
-  });
+  let randomColor = (Math.floor(Math.random()*600));  
+  let color1 = randomColor
+  ChoixCouleur1.style.backgroundColor = getAllColors()[randomColor];
+  randomColor = (Math.floor(Math.random()*600));  
+  let color2 = randomColor
+  ChoixCouleur2.style.backgroundColor = getAllColors()[randomColor];
+  randomColor = (Math.floor(Math.random()*600));  
+  let color3 = randomColor
+  ChoixCouleur3.style.backgroundColor = getAllColors()[randomColor];
+  randomColor = (Math.floor(Math.random()*600));  
+  let color4 = randomColor
+  ChoixCouleur4.style.backgroundColor = getAllColors()[randomColor];
+
+  ChoixCouleur1.addEventListener('click', ()=>{
+    localStorage.setItem("couleur",getAllColors()[color1])
+    localStorage.setItem("coCouleur",coCouleur.get(getAllColors()[color1]))
+    location.assign("nuancier.html")
+  })
+    ChoixCouleur2.addEventListener('click', ()=>{
+    localStorage.setItem("couleur",getAllColors()[color2])
+    localStorage.setItem("coCouleur",coCouleur.get(getAllColors()[color2]))
+    location.assign("nuancier.html")
+  })
+    ChoixCouleur3.addEventListener('click', ()=>{
+    localStorage.setItem("couleur",getAllColors()[color3])
+    localStorage.setItem("coCouleur",coCouleur.get(getAllColors()[color3]))
+    location.assign("nuancier.html")
+  })
+    ChoixCouleur4.addEventListener('click', ()=>{
+    localStorage.setItem("couleur",getAllColors()[color4])
+    localStorage.setItem("coCouleur",coCouleur.get(getAllColors()[color4]))
+    location.assign("nuancier.html")
+  })
   function getAllColors(){
     const COLS = 30;
     const ROWS = 20;    

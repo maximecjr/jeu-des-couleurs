@@ -58,3 +58,8 @@ li{
   color: white;
 }
 .carre { width: 200px; aspect-ratio: 1 / 1; border-radius: 12px; }
+
+.container {
+  display: flex;         /* active le mode flex */
+  gap: 10px;             /* espace entre les divs (optionnel) */
+}
