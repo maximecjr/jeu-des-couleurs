@@ -39,6 +39,8 @@ function points(essai){
 
 j1 = j1 + points(1)
 j1 = j1 + points(2)
+const gain = document.getElementById('gain')
+gain.textContent = "Vous avez gagnez: " + j1
 if (localStorage.getItem("pointsJ1") != null){
     j1 = j1 + parseInt(localStorage.getItem("pointsJ1"))
 }
