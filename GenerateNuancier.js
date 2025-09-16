@@ -42,6 +42,7 @@
               localStorage.setItem("reponse2Color", colorHex)
             }
             document.getElementById('popup').style.display = 'block'
+            document.getElementById('carre').style.backgroundColor = colorHex
             document.getElementById('closePopup').addEventListener("click", () =>{
               document.getElementById('popup').style.display = 'none'
             });
