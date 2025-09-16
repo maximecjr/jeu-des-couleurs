@@ -1,5 +1,6 @@
   const el = document.getElementById('carre');
   const btnCarte = document.getElementById('BtnCarte');
+  const btnStart = document.getElementById('StartBtn');
   var coCouleur = new Map();
   if(localStorage.getItem("guess") == null){
     localStorage.setItem("guess", 1)
@@ -10,6 +11,13 @@
     console.log(getAllColors()[randomColor])
     localStorage.setItem("couleur",getAllColors()[randomColor])
     localStorage.setItem("coCouleur",coCouleur.get(getAllColors()[randomColor]))
+  });
+  btnStart.addEventListener('click', () => {
+    if(localStorage.getItem("couleur")==null){
+      alert('veuillez tirez une carte')
+    }else{
+      document.location.replace('nuancier.html')
+    }
   });
   function getAllColors(){
     const COLS = 30;
