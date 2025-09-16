@@ -1,0 +1,44 @@
+:root{
+  --cols: 30;        /* colonnes */
+  --rows: 20;        /* lignes */
+  --cell: 28px;      /* taille des cases */
+  --gap: 1px;        /* espacement */
+}
+body{
+  margin:0; display:grid; place-items:center; min-height:100vh; background:#111;
+}
+.board{
+  display:grid;
+  grid-template-columns: repeat(var(--cols), var(--cell));
+  grid-auto-rows: var(--cell);
+  gap: var(--gap);
+  padding:10px;
+}
+.cell{
+  border-radius:4px;
+}
+
+.popup{
+  display: none;
+}
+    
+.popup-encart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba( 0, 0, 0, .25 )
+}
+.popup-contenu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 25px;
+  background: white;
+  transform: translate(-50%, -50%)
+}
+
+.cell.highlight {
+    border: 3px solid rgb(255, 253, 253);
+}

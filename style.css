@@ -1,0 +1,2 @@
+  .carre { width: 200px; aspect-ratio: 1 / 1; border-radius: 12px; }
+  body { display:grid; place-items:center; height:100vh; margin:0; background:#0f172a; }
